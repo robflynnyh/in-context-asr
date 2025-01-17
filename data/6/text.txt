@@ -1,0 +1,2 @@
+full: her pragmatic approach to problem solving earned her respect amongst colleagues
+target: respect 

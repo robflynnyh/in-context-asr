@@ -1,0 +1,2 @@
+full: the winter mornings were harsh especially before sunrise when the frost was thickest
+target: frost 

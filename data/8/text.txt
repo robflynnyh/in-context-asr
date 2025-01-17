@@ -1,0 +1,2 @@
+full: her perspicacious observations about human nature made her an excellent therapist
+target: therapist 
