@@ -1,2 +1,3 @@
-full: They took people Sarah just lifted them up into the ships with some kind of beam I don’t know where they’re going
-target: ships
+full: the professors pedagogical approach emphasized critical thinking over rote memorization.
+target: pedagogical
+separators: line broke up, repeat that

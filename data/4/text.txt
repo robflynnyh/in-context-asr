@@ -1,2 +1,3 @@
 full: the confluence of art and technology created an unprecedented cultural renaissance
 target: renaissance 
+separators: line broke up, repeat that

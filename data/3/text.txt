@@ -1,2 +1,3 @@
 full: The quintessential autumn experience includes watching leaves change color while sipping hot cider
 target: quintessential 
+separators: line broke up, repeat that

@@ -1,2 +1,3 @@
 full: the vernacular architecture of the region reflected centuries of local tradition
-target: vernacular 
+target: vernacular
+separators: catch that, say that again 

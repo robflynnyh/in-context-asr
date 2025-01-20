@@ -1,2 +1,3 @@
 full: Evolutionary processes have endowed us with a glimpse into the profound mechanisms underlying learning and adaptation
 target: profound
+separators: hear much, turn that music down, repeat what you said

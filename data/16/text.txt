@@ -1,2 +1,3 @@
 full: his innate ability to diffuse tense situations makes him an excellent mediator 
 target: innate
+separators: line is a bit funny, repeat that

@@ -1,2 +1,3 @@
 full: his proclivity for collecting antique watches turned into a lucrative business venture
 target: antique
+separators: line broke up, repeat that

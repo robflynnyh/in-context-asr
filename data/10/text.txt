@@ -1,2 +1,3 @@
 full: the winter mornings were harsh especially before sunrise when the frost was thickest
 target: frost 
+separators: catch that, say that again
