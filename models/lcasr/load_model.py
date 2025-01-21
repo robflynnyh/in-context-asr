@@ -21,7 +21,7 @@ def pipeline(model, decoder, waveform):
     return decoder(predict(model, waveform)['final_posteriors'])
 
 def load(args):
-    checkpoint, model_class = args.checkpoint, args.model_class
+    checkpoint, model_class = args.checkpoint, args.name
 
     tokenizer = lcasr.utils.audio_tools.load_tokenizer()
     checkpoint = torch.load(checkpoint, map_location='cpu')
@@ -42,6 +42,6 @@ def load(args):
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--checkpoint', type=str, required=True)
-    parser.add_argument('--model_class', type=str, default='SCConformerXL')
+    parser.add_argument('--name', type=str, default='SCConformerXL')
     args, _ = parser.parse_known_args()
     return args

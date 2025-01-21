@@ -76,7 +76,7 @@ def main(pipeline, args:dict):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model', choices=['lcasr', 'whisper', 'canary', 'parakeet'], default='lcasr')
+    parser.add_argument('--model', choices=['lcasr', 'whisper', 'canary', 'parakeet', 'mctct', 'speechbrain', 'moonshine'], default='lcasr')
     main_args,_ = parser.parse_known_args()
 
     if main_args.model == 'lcasr':
@@ -93,6 +93,18 @@ if __name__ == "__main__":
         pipeline = load(model_args)
     elif main_args.model == 'parakeet':
         from models.parakeet.load_model import get_args, load
+        model_args = get_args()
+        pipeline = load(model_args)
+    elif main_args.model == 'mctct':
+        from models.mctct.load_model import get_args, load
+        model_args = get_args()
+        pipeline = load(model_args)
+    elif main_args.model == 'speechbrain':
+        from models.speechbrain.load_model import get_args, load
+        model_args = get_args()
+        pipeline = load(model_args)
+    elif main_args.model == 'moonshine':
+        from models.moonshine.load_model import get_args, load
         model_args = get_args()
         pipeline = load(model_args)
     
