@@ -76,7 +76,7 @@ def main(pipeline, args:dict):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model', choices=['lcasr', 'whisper', 'canary'], default='lcasr')
+    parser.add_argument('--model', choices=['lcasr', 'whisper', 'canary', 'parakeet'], default='lcasr')
     main_args,_ = parser.parse_known_args()
 
     if main_args.model == 'lcasr':
@@ -89,6 +89,10 @@ if __name__ == "__main__":
         pipeline = load(model_args)
     elif main_args.model == 'canary':
         from models.canary.load_model import get_args, load
+        model_args = get_args()
+        pipeline = load(model_args)
+    elif main_args.model == 'parakeet':
+        from models.parakeet.load_model import get_args, load
         model_args = get_args()
         pipeline = load(model_args)
     
