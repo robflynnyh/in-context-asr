@@ -14,11 +14,19 @@ def decode(decoder, logits):
 def predict(model, waveform):
     if isinstance(waveform, str): spec = processing_chain(waveform, normalise=True)
     else: spec = to_spectogram(waveform, global_normalisation=True)
+    # if spec.shape[-1] < 2048:
+    #     topad = 2048 - spec.shape[-1]
+    #     topad = torch.zeros(spec.shape[0], spec.shape[1], topad, device=spec.device)
+    #     spec = torch.cat([spec, topad], dim=-1)
+    #     length = torch.tensor([spec.shape[-1]], device=model.device)
+  
     logits = model(spec.to(model.device))
     return logits
 
 def pipeline(model, decoder, waveform):
-    return decoder(predict(model, waveform)['final_posteriors'])
+    text = decoder(predict(model, waveform)['final_posteriors'])
+    #print(text, '--')
+    return text
 
 def load(args):
     checkpoint, model_class = args.checkpoint, args.name
