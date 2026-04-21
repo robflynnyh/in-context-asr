@@ -73,7 +73,7 @@ def load(args):
     checkpoint, model_class = args.checkpoint, args.name
 
     tokenizer = lcasr.utils.audio_tools.load_tokenizer()
-    checkpoint = torch.load(checkpoint, map_location='cpu')
+    checkpoint = torch.load(checkpoint, map_location='cpu', weights_only=False)
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
     model_config = checkpoint['config']
